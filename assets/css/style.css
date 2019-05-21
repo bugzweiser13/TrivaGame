@@ -1,0 +1,30 @@
+body {
+    background: url("../images/background/bg_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner {
+    margin-top: 5%;
+    background-color: white;
+}
+
+#game {
+    background: url("../images/background/kr_bg.jpg");
+    /*no-repeat center center fixed;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    border-radius: 5px;
+    height: 700px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.74), 0 40px 60px 0 rgba(175, 2, 255, 0.856);
+}
+
+.start,
+.reset {
+    margin-top: 2%;
+    float: left;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
