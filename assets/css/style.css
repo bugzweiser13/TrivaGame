@@ -2,29 +2,110 @@ body {
     background: url("../images/background/bg_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: white
 }
 
 #banner {
-    margin-top: 5%;
-    background-color: white;
+    font-family: Monoton;
+    font-size: 100px;
+    margin-top: 3%;
 }
 
-#game {
-    background: url("../images/background/kr_bg.jpg");
-    /*no-repeat center center fixed;*/
+#game_area {
+    background-image: linear-gradient( rgba(255, 1, 221, 0.308), rgba(225, 1, 255, 0.692), rgba(175, 1, 255, 0.76));
+    /*background-color: rgba(255, 1, 221, 0.308);*/
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 2%;
     border-radius: 5px;
-    height: 700px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 65%;
+    height: 600px;
+    text-align: center;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.74), 0 40px 60px 0 rgba(175, 2, 255, 0.856);
 }
 
 .start,
 .reset {
-    margin-top: 2%;
+    font-weight: 500;
+    margin-top: 1%;
     float: left;
     padding: 5px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+}
+
+.start:hover,
+.reset:hover {
+    background-color: aqua;
+}
+
+.time {
+    color: white;
+    font-family: Orbitron;
+    font-size: 25px;
+}
+
+#timer_area {
+    text-align: center;
+    margin: 5% 0 0 3%;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.603);
+    border-radius: 5px;
+    border: 2px solid rgba(255, 0, 0, 0.644);
+}
+
+.countdown,
+.countdown h3 {
+    font-family: Orbitron;
+    font-size: 70px;
+    margin-bottom: 1%;
+    color: red;
+}
+
+#question {
+    background-color: rgba(245, 244, 245, 0.459);
+    border: 2px solid rgba(255, 0, 0, 0.644);
+    border-radius: 5px;
+    max-height: 150px;
+    margin: 5% 0 0 2%;
+}
+
+#question h3 {
+    margin: 5% auto 2% auto;
+    text-align: justify;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.answer_area {
+    background-color: rgba(245, 244, 245, 0.534);
+    border: 2px solid rgba(255, 0, 0, 0.644);
+    border-radius: 5px;
+    height: 320px;
+    margin: 1% 0 0 1%;
+}
+
+#answer {
+    margin: 5% 0 0 0;
+}
+
+.answerCh {
     border: 1px solid black;
     border-radius: 5px;
+    width: 40%;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.603);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.74), 0 40px 60px 0 rgba(175, 2, 255, 0.856);
+}
+
+.answerCh:hover {
+    background-color: aqua;
 }
