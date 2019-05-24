@@ -110,3 +110,12 @@ body {
 .answerCh:hover {
     background-color: aqua;
 }
+
+@media only screen and (min-width: 1000px) {
+    #banner {
+        font-size: 80px;
+    }
+    .time {
+        font-size: 18px;
+    }
+}
