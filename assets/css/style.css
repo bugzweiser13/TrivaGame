@@ -74,7 +74,7 @@ body {
 }
 
 #question h3 {
-    margin: 5% auto 2% auto;
+    margin: 5% auto 3% auto;
     text-align: justify;
     color: white;
     text-shadow: 2px 2px black;
@@ -111,15 +111,37 @@ body {
     background-color: aqua;
 }
 
-@media only screen and (min-width: 1300px) {
-    body {
-        background-position: center center;
-        background-size: cover;
-    }
+@media only screen and (min-width: 1000px) {
     #banner {
-        font-size: 50px;
+        font-size: 80px;
+    }
+    #banner img {
+        margin-top: 1%;
+        width: 10%;
     }
     .time {
         font-size: 18px;
+    }
+    #game_area {
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #banner {
+        font-size: 60px;
+    }
+    #banner img {
+        margin-top: 1%;
+        width: 10%;
+    }
+    .time {
+        font-size: 16px;
+    }
+    #game_area {
+        margin-top: 1%;
+    }
+    #question h3 {
+        font-size: 25px;
     }
 }

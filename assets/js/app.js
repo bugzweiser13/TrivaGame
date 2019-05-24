@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
+    //audio / soundeffects
     var correct = new Audio("assets/sounds/correct.mp3");
     var wrong = new Audio("assets/sounds/wrong.mp3");
     var tick = new Audio("assets/sounds/tick.mp3");
+    var gameOver = new Audio("assets/sounds/over.mp3")
+
 
     //triva objects
     var triva = [{
@@ -39,7 +42,7 @@ $(document).ready(function() {
             image: "assets/images/popup/fg.jpg",
         },
         {
-            question: "This suave character solved all the cases, after which he wined all the ladies on his yaught in Marina Del Rey?",
+            question: "This suave character solved all the cases, after which he wined all the ladies on his yacht in Marina Del Rey?",
             choice: [
                 "Benson",
                 "The Equalizer",
@@ -50,7 +53,7 @@ $(document).ready(function() {
             image: "assets/images/popup/q.jpg",
         },
         {
-            question: "Before Apple Watches were all the rage, in this show the main character communicated with his",
+            question: "Before Apple Watches were all the rage, in this show the main character communicated with his?",
             choice: [
                 "Fantasy Island",
                 "Matlock",
@@ -94,7 +97,7 @@ $(document).ready(function() {
             image: "assets/images/popup/mpi.jpg",
         },
         {
-            question: "With some chewing gum, duct tape, and bailing wire, this character of this show can take down any emeny force?",
+            question: "With some chewing gum, duct tape, and bailing wire, this character of this show can take down any enemy force?",
             choice: [
                 "The Equalizer",
                 "MacGyver",
@@ -159,6 +162,7 @@ $(document).ready(function() {
 
         //stop the timer if reaches zero
         if (timer === -1) {
+            tick.pause();
             wrong.play();
             unansweredCount++;
             stop();
@@ -189,6 +193,7 @@ $(document).ready(function() {
             userChoice.attr("data-guessValue", i);
             $("#answer").append(userChoice);
 
+            //console logs
         }
 
         //answer choice if/else 
@@ -226,6 +231,8 @@ $(document).ready(function() {
             //scoresheet after complition of all 10 questions
             if ((wrongCount + correctCount + unansweredCount) === tCount) {
 
+                gameOver.play();
+                $("#countdown").text("00");
                 $("#question").empty();
                 $("#answer").html("<h3 style='color: white; text-shadow: 2px 2px black;'> Game Over, Please Play Again. <br> You Scored: </h3>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Correct: " + correctCount + "</h4>");
@@ -233,9 +240,12 @@ $(document).ready(function() {
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Unanswered: " + unansweredCount + "</h4>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Please Click Play Again Below </h4>");
                 $("#reset").show();
+
                 correctCount = 0;
                 wrongCount = 0;
                 unansweredCount = 0;
+
+
             } else {
                 runTimer();
                 showQst();
