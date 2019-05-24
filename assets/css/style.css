@@ -12,10 +12,11 @@ body {
 }
 
 #game_area {
-    background-image: linear-gradient( rgba(255, 1, 221, 0.308), rgba(225, 1, 255, 0.692), rgba(175, 1, 255, 0.76));
-    /*background-color: rgba(255, 1, 221, 0.308);*/
+    /*background-image: linear-gradient( rgba(255, 1, 221, 0.308), rgba(225, 1, 255, 0.692), rgba(175, 1, 255, 0.76));*/
+    background-color: rgba(204, 1, 255, 0.308);
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px solid black;
     margin-top: 2%;
     border-radius: 5px;
     border-left: 1px solid black;
@@ -80,7 +81,7 @@ body {
 }
 
 .answer_area {
-    background-color: rgba(245, 244, 245, 0.534);
+    background-color: rgba(250, 219, 250, 0.534);
     border: 2px solid rgba(255, 0, 0, 0.644);
     border-radius: 5px;
     height: 320px;

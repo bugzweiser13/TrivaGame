@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    var correct = new Audio("assets/sounds/correct.mp3");
+    var wrong = new Audio("assets/sounds/wrong.mp3");
+    var tick = new Audio("assets/sounds/tick.mp3");
+
     //triva objects
     var triva = [{
             question: "This popular TV Show featured a Dodge Charger as a main character?",
@@ -108,7 +112,7 @@ $(document).ready(function() {
                 "Mama's Family",
                 "Alf",
             ],
-            answer: 1,
+            answer: 0,
             image: "assets/images/popup/mwc.jpg",
         }
     ];
@@ -150,13 +154,15 @@ $(document).ready(function() {
     //countdown
     function decrement() {
         $("#countdown").html("<h3>" + timer + "</h3>");
+        tick.play();
         timer--;
 
         //stop the timer if reaches zero
         if (timer === -1) {
+            wrong.play();
             unansweredCount++;
             stop();
-            $("#answer").html("<h3 style='color: white; text-shadow: 2px 2px black;'>TIME IS UP!!! <br> The correct answer is: " + pick.choice[pick.answer] + "</h3>");
+            $("#answer").html("<h3 style='color: white; text-shadow: 2px 2px black; margin: -3% 0 0 0;'>TIME IS UP!!! <br> The correct answer is: " + pick.choice[pick.answer] + "</h3>");
             hidePicture();
         }
     }
@@ -191,15 +197,17 @@ $(document).ready(function() {
             userGuess = parseInt($(this).attr("data-guessValue"));
 
             if (userGuess === pick.answer) {
+                correct.play();
                 stop();
                 correctCount++;
-                $("#answer").html("<h3 style='text-shadow: 2px 2px black;'>You Are Correct!!!</h3>");
+                $("#answer").html("<h3 style='text-shadow: 2px 2px black; margin: -3% 0 0 0;'>You Are Correct!!!</h3>");
                 hidePicture();
             } else {
+                wrong.play();
                 stop();
                 wrongCount++;
                 userGuess = "";
-                $("#answer").html("<h3 style='color: red; text-shadow: 2px 2px black;'>You Are Wrong! <br> The answer is: " + pick.choice[pick.answer] + "</h3>");
+                $("#answer").html("<h3 style='color: red; text-shadow: 2px 2px black; margin: -3% 0 0 0;'>You Are Wrong! <br> The Answer is: " + pick.choice[pick.answer] + "</h3>");
                 hidePicture();
             }
         })
@@ -207,7 +215,7 @@ $(document).ready(function() {
 
     //show image related to question asked
     function hidePicture() {
-        $("#answer").append("<img src=" + pick.image + ">");
+        $("#answer").append("<img src=" + pick.image + " style='box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.74), 0 40px 60px 0 rgba(175, 2, 255, 0.856); margin-top: 1%;'>");
         newArray.push(pick);
         triva.splice(index, 1);
 
