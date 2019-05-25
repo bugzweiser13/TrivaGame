@@ -232,7 +232,7 @@ $(document).ready(function() {
 
             //scoresheet after complition of all 10 questions
             if ((wrongCount + correctCount + unansweredCount) === tCount) {
-
+                tick.pause();
                 gameOver.play();
                 $("#countdown").text("00");
                 $("#question").empty();
