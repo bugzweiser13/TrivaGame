@@ -111,7 +111,16 @@ body {
     background-color: aqua;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
+    #banner {
+        font-size: 80px;
+    }
+    .time {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
     #banner {
         font-size: 70px;
     }
@@ -148,13 +157,14 @@ body {
     }
     #game_area {
         margin: 1% 0 15% 0;
-        height: 400px;
+        height: 420px;
     }
     .countdown,
     .countdown h3 {
         font-size: 50px;
     }
-    #question h3 {
+    #question h3,
+    #answer h3 {
         font-size: 20px;
     }
     .answer_area {
@@ -165,5 +175,8 @@ body {
         width: 30%;
         margin: 1% auto;
         font-size: 14px;
+    }
+    #answer img {
+        width: 35%
     }
 }

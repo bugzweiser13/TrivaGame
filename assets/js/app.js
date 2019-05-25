@@ -53,7 +53,7 @@ $(document).ready(function() {
             image: "assets/images/popup/q.jpg",
         },
         {
-            question: "Before Apple Watches were all the rage, in this show the main character communicated with his?",
+            question: "This 80s show possibly launched the idea for Apple Watches&reg;?",
             choice: [
                 "Fantasy Island",
                 "Matlock",
@@ -135,10 +135,12 @@ $(document).ready(function() {
     var trivaXfer = [];
 
     //game start (button hide)
+
     $("#reset").hide();
     $("#start").on('click', function() {
         $("#start").hide();
         $("#reset").hide();
+        $("#answer").empty();
         showQst();
         runTimer();
         for (var i = 0; i < triva.length; i++) {
