@@ -203,7 +203,10 @@ body {
         }
         #game_area {
             margin: 0 auto 5% auto;
-            height: 625px;
+            height: 475px;
+        }
+        #filler {
+            height: 100px;
         }
         .countdown,
         .countdown h3 {
