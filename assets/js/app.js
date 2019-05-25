@@ -86,7 +86,7 @@ $(document).ready(function() {
             image: "assets/images/popup/at.jpg",
         },
         {
-            question: "This Navy Seal spead around chasing bad guys, as everyones favorite detective?",
+            question: "This Navy Seal sped around chasing bad guys in paradise, as everyone's favorite detective?",
             choice: [
                 "MacGyver",
                 "The Incredible Hulk",
