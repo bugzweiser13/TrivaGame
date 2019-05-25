@@ -111,9 +111,9 @@ body {
     background-color: aqua;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     #banner {
-        font-size: 80px;
+        font-size: 70px;
     }
     #banner img {
         margin-top: 1%;
@@ -127,21 +127,43 @@ body {
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 800px) {
     #banner {
-        font-size: 60px;
+        font-size: 50px;
     }
     #banner img {
         margin-top: 1%;
         width: 10%;
     }
+    .start,
+    .reset {
+        font-size: 10px;
+    }
     .time {
-        font-size: 16px;
+        margin: 1% 0 0 1%;
+        font-size: 14px;
+    }
+    #timer_area {
+        height: 100px;
     }
     #game_area {
-        margin-top: 1%;
+        margin: 1% 0 15% 0;
+        height: 400px;
+    }
+    .countdown,
+    .countdown h3 {
+        font-size: 50px;
     }
     #question h3 {
-        font-size: 25px;
+        font-size: 20px;
+    }
+    .answer_area {
+        height: 225px;
+        margin: 1% 0 0 1%;
+    }
+    .answerCh {
+        width: 30%;
+        margin: 1% auto;
+        font-size: 14px;
     }
 }
