@@ -179,4 +179,56 @@ body {
     #answer img {
         width: 35%
     }
+    @media only screen and (max-width: 500px) {
+        #banner {
+            margin-left: 5%;
+            font-size: 40px;
+        }
+        #banner img {
+            margin-top: 1%;
+            width: 10%;
+        }
+        .start,
+        .reset {
+            font-size: 10px;
+        }
+        .time {
+            margin: 1% 0 0 1%;
+            font-size: 14px;
+        }
+        #timer_area {
+            margin: 5% auto 5% auto;
+            width: 60%;
+            height: 100px;
+        }
+        #game_area {
+            margin: 0 auto 5% auto;
+            height: 470px;
+        }
+        .countdown,
+        .countdown h3 {
+            font-size: 50px;
+        }
+        #question {
+            width: 90%;
+            margin: 0 auto 3% auto;
+            height: 95px;
+        }
+        #question h3,
+        #answer h3 {
+            font-size: 16px;
+        }
+        .answer_area {
+            height: 180px;
+            margin: 0 auto 5% auto;
+        }
+        .answerCh {
+            width: 80%;
+            margin: 1% auto;
+            font-size: 14px;
+        }
+        #answer img {
+            width: 80%
+        }
+    }
 }
