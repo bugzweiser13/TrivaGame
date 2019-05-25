@@ -1,3 +1,3 @@
 # TrivaGame
 
-https://bugzweiser13.github.io/TrivaGame/
+https://bugzweiser13.github.io/TriviaGame/
