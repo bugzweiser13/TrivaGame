@@ -218,6 +218,9 @@ body {
         #answer h3 {
             font-size: 16px;
         }
+        #answer h4 {
+            font-size: 14px;
+        }
         .answer_area {
             height: 180px;
             margin: 0 auto 5% auto;
