@@ -182,7 +182,7 @@ body {
     @media only screen and (max-width: 500px) {
         #banner {
             margin-left: 5%;
-            font-size: 40px;
+            font-size: 35px;
         }
         #banner img {
             margin-top: 1%;
@@ -203,7 +203,7 @@ body {
         }
         #game_area {
             margin: 0 auto 5% auto;
-            height: 650px;
+            height: 625px;
         }
         .countdown,
         .countdown h3 {
@@ -216,7 +216,7 @@ body {
         }
         #question h3,
         #answer h3 {
-            font-size: 16px;
+            font-size: 15px;
         }
         #answer h4 {
             font-size: 14px;
