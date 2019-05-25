@@ -4,7 +4,8 @@ $(document).ready(function() {
     var correct = new Audio("assets/sounds/correct.mp3");
     var wrong = new Audio("assets/sounds/wrong.mp3");
     var tick = new Audio("assets/sounds/tick.mp3");
-    var gameOver = new Audio("assets/sounds/over.mp3")
+    var gameOver = new Audio("assets/sounds/over.mp3");
+    var rollOver = new Audio("assets/sounds/rollover.mp3")
 
 
     //triva objects
@@ -195,6 +196,10 @@ $(document).ready(function() {
             userChoice.attr("data-guessValue", i);
             $("#answer").append(userChoice);
 
+            $(".answerCh").hover(function(event) {
+                rollOver.play() = event;
+            });
+
             //console logs
         }
 
@@ -204,12 +209,14 @@ $(document).ready(function() {
             userGuess = parseInt($(this).attr("data-guessValue"));
 
             if (userGuess === pick.answer) {
+                //play correct sound (claps)
                 correct.play();
                 stop();
                 correctCount++;
                 $("#answer").html("<h3 style='text-shadow: 2px 2px black; margin: -3% 0 0 0;'>You Are Correct!!!</h3>");
                 hidePicture();
             } else {
+                //play wrong sound (boo)
                 wrong.play();
                 stop();
                 wrongCount++;
@@ -232,17 +239,21 @@ $(document).ready(function() {
 
             //scoresheet after complition of all 10 questions
             if ((wrongCount + correctCount + unansweredCount) === tCount) {
+                //pause and play needed sounds
                 tick.pause();
                 gameOver.play();
+                //reset timer and empty question field
                 $("#countdown").text("00");
                 $("#question").empty();
+                //Scoresheet Print Out
                 $("#answer").html("<h3 style='color: white; text-shadow: 2px 2px black;'> Game Over, Please Play Again. <br> You Scored: </h3>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Correct: " + correctCount + "</h4>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Incorrect: " + wrongCount + "</h4>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Unanswered: " + unansweredCount + "</h4>");
                 $("#answer").append("<h4 style='color: white; text-shadow: 2px 2px black;'> Please Click Play Again Below </h4>");
+                //Show Play Again Button
                 $("#reset").show();
-
+                //reset variables
                 correctCount = 0;
                 wrongCount = 0;
                 unansweredCount = 0;
